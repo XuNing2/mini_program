@@ -1,84 +1,87 @@
 <template>
     <div>
-        <h1 class="title">mJOA评分</h1>
-        <hr class="hr" />
+        <el-main>
+            <!-- Main content -->
+            <h1 class="title">mJOA评分</h1>
+            <div class="hr" />
+            <div class="question">上肢运动功能：</div>
+            <div>
+                <el-radio v-model="form.limb" label="5">正常</el-radio>
 
-        <el-form ref="form" :model="form" label-position="top">
-            <el-form-item label="上肢运动功能：">
-                <el-select v-model="form.limb">
-                    <el-option label="正常" value="5"></el-option>
-                    <el-option label="系衬衫纽扣有点困难" value="4"></el-option>
-                    <el-option label="系衬衫纽扣非常困难" value="3"></el-option>
-                    <el-option
-                        label="不能系衬衫纽扣但能用勺子吃饭"
-                        value="2"
-                    ></el-option>
-                    <el-option
-                        label="不能用勺子吃饭但手能移动"
-                        value="1"
-                    ></el-option>
-                    <el-option label="手无法移动" value="0"></el-option>
-                </el-select>
-            </el-form-item>
-
-            <el-form-item label="下肢运动功能：">
-                <el-select v-model="form.leg" placeholder="请点击选择您的状况">
-                    <el-option label="正常" value="7"></el-option>
-                    <el-option
-                        label="缺乏稳定性(轻度)，但无需搀扶，可平稳走路"
-                        value="6"
-                    ></el-option>
-                    <el-option
-                        label="缺乏稳定性(中度到重度)，但能不扶栏杆上下楼梯"
-                        value="5"
-                    ></el-option>
-                    <el-option label="扶栏杆能上下楼梯" value="4"></el-option>
-                    <el-option
-                        label="能够使用助行器(即手杖或拐杖)在平地上行走"
-                        value="3"
-                    ></el-option>
-                    <el-option label="能活动腿但不能走路" value="2"></el-option>
-                    <el-option
-                        label="感觉存在，但无法移动腿"
-                        value="1"
-                    ></el-option>
-                    <el-option
-                        label="完全丧失运动和感觉功能"
-                        value="0"
-                    ></el-option>
-                </el-select>
-            </el-form-item>
-
-            <el-form-item label="感觉功能：">
-                <el-select v-model="form.feel" placeholder="请点击选择您的状况">
-                    <el-option label="无感觉缺失" value="3"></el-option>
-                    <el-option label="轻度感觉缺失" value="2"></el-option>
-                    <el-option label="严重感觉缺失或疼痛" value="1"></el-option>
-                    <el-option label="完全丧失手部感觉" value="0"></el-option>
-                </el-select>
-            </el-form-item>
-
-            <el-form-item label="括约肌功能:">
-                <el-select
-                    v-model="form.sphinc"
-                    placeholder="请点击选择您的状况"
+                <el-radio v-model="form.limb" label="4"
+                    >系衬衫纽扣有点困难</el-radio
                 >
-                    <el-option label="正常排尿" value="3"></el-option>
-                    <el-option
-                        label="排尿困难(轻度到中度)"
-                        value="2"
-                    ></el-option>
-                    <el-option label="排尿困难(重度)" value="1"></el-option>
-                    <el-option label="无法自主排尿" value="0"></el-option>
-                </el-select>
-            </el-form-item>
-
-            <el-form-item>
-                <el-button type="primary" @click="onSubmit" round
-                    >提交</el-button
+                <el-radio v-model="form.limb" label="3"
+                    >系衬衫纽扣非常困难</el-radio
                 >
-            </el-form-item>
-        </el-form>
+                <el-radio v-model="form.limb" label="2"
+                    >不能系衬衫纽扣但能用勺子吃饭</el-radio
+                >
+                <el-radio v-model="form.limb" label="1"
+                    >不能用勺子吃饭但手能移动</el-radio
+                >
+                <el-radio v-model="form.limb" label="0">手无法移动</el-radio>
+            </div>
+            <div class="hr1" />
+
+            <div class="question">下肢运动功能：</div>
+            <div>
+                <el-radio v-model="form.leg" label="7">正常</el-radio>
+
+                <el-radio v-model="form.leg" label="6"
+                    >缺乏稳定性(轻度)，但无需搀扶，可平稳走路</el-radio
+                >
+                <el-radio v-model="form.leg" label="5"
+                    >缺乏稳定性(中度到重度)，但能不扶栏杆上下楼梯</el-radio
+                >
+                <el-radio v-model="form.leg" label="4"
+                    >扶栏杆能上下楼梯</el-radio
+                >
+                <el-radio v-model="form.leg" label="3"
+                    >能够使用助行器(即手杖或拐杖)在平地上行走</el-radio
+                >
+                <el-radio v-model="form.leg" label="2"
+                    >能活动腿但不能走路</el-radio
+                >
+                <el-radio v-model="form.leg" label="1"
+                    >感觉存在，但无法移动腿</el-radio
+                >
+                <el-radio v-model="form.leg" label="0"
+                    >完全丧失运动和感觉功能</el-radio
+                >
+            </div>
+            <div class="hr1" />
+            <div class="question">感觉功能:</div>
+            <div>
+                <el-radio v-model="form.feel" label="3">正常</el-radio>
+
+                <el-radio v-model="form.feel" label="2"
+                    >缺乏稳定性(轻度)，但无需搀扶，可平稳走路</el-radio
+                >
+                <el-radio v-model="form.feel" label="1"
+                    >缺乏稳定性(中度到重度)，但能不扶栏杆上下楼梯</el-radio
+                >
+                <el-radio v-model="form.feel" label="0"
+                    >扶栏杆能上下楼梯</el-radio
+                >
+            </div>
+            <div class="hr1" />
+            <div class="question">括约肌功能:</div>
+            <div>
+                <el-radio v-model="form.sphinc" label="3">正常排尿</el-radio>
+
+                <el-radio v-model="form.sphinc" label="2"
+                    >排尿困难(轻度到中度)</el-radio
+                >
+                <el-radio v-model="form.sphinc" label="1"
+                    >排尿困难(重度)</el-radio
+                >
+                <el-radio v-model="form.sphinc" label="0"
+                    >无法自主排尿</el-radio
+                >
+                <div class="hr1" />
+            </div> </el-main
+        ><el-button type="primary" @click="onSubmit" round>提交</el-button>
     </div>
 </template>
 
@@ -87,10 +90,10 @@ export default {
     data() {
         return {
             form: {
-                limb: "",
-                leg: "",
-                feel: "",
-                sphinc: "",
+                limb: "5",
+                leg: "7",
+                feel: "3",
+                sphinc: "3",
                 // score: "",
             },
         };
@@ -135,12 +138,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* .container{
   display: flex;
   flex-direction: column;
   align-items: center;
 } */
+.el-main {
+    /* color: #333; */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+}
 .title {
     /* font-size: 55rpx;
   margin-top: 20rpx;
@@ -148,10 +159,24 @@ export default {
     font-weight: bold;
     letter-spacing: 3px;
     color: black;
+    text-align: center;
+}
+.question {
+    color: #989898;
+    font-weight: bold;
 }
 .hr {
     width: 100%;
     height: 3px;
     background-color: #eeeeee;
+}
+.hr1 {
+    width: 100%;
+    height: 1px;
+    background-color: #eeeeee;
+}
+.el-radio {
+    display: block;
+    margin: 10px 0;
 }
 </style>
