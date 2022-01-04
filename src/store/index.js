@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         // gId: -1,
+        gHand: 0,
         gCheckLeft: false,
         gCheckRight: false,
         gCheckQS: false,
@@ -23,6 +24,9 @@ export default new Vuex.Store({
         gId: JSON.parse(localStorage.getItem("gId")) || {},
     },
     mutations: {
+        setHand(state, v) {
+            state.gHand = v;
+        },
         setgId(state, v) {
             //将传递的数据先保存到localStorage中
             localStorage.setItem("gId", JSON.stringify(v));

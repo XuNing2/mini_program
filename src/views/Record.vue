@@ -105,28 +105,29 @@ export default {
     },
     methods: {
         onRecordLeft() {
-            this.checkLeft = true;
             // this.$router.push({ name: "Record_camera" ,params:{
             //   handId:'0'
             // }});
+            this.$store.commit("setHand", 0);
             this.$router.push({
                 // path: "/record_camera",
                 // query: {
                 //   handId: "0",
                 // },
                 path: "/test",
-                query: {
-                    handId: "0",
-                },
+                // query: {
+                //     handId: "0",
+                // },
             });
         },
         onRecordRight() {
             console.log("录制右手");
+            this.$store.commit("setHand", 1);
             this.$router.push({
                 path: "/test",
-                query: {
-                    handId: "1",
-                },
+                // query: {
+                //     handId: "1",
+                // },
             });
         },
         onQs() {
