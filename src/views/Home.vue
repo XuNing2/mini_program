@@ -85,7 +85,7 @@
                 </label>
             </div>
 
-            <div class="version-txt">v1.4.0</div>
+            <div class="version-txt">v1.0</div>
         </div>
     </div>
 </template>
