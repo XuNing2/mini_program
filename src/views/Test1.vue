@@ -87,6 +87,10 @@ export default {
                     this.onSuccess();
                 })
                 .catch((res) => {
+                    this.$alert("未上传成功，请重新尝试上传！", "提示", {
+                        confirmButtonText: "确认",
+                        callback: (action) => {},
+                    });
                     console.log("error upload!!!!");
                 });
         },

@@ -6,7 +6,7 @@
                 class="video-js vjs-default-skin"
                 playsinline
             ></video>
-            <div class="note-txt">请录制10-12秒的手部抓握视频</div>
+            <div class="note-txt">请录制或上传10-12秒的手部抓握视频</div>
             <el-button type="primary" size="default" @click="upload" round
                 >上传视频</el-button
             ><Directupload></Directupload
@@ -28,6 +28,7 @@ import Record from "videojs-record/dist/videojs.record.js";
 import Test1 from "./Test1.vue";
 
 export default {
+    name: "Test",
     data() {
         return {
             player: "",
