@@ -48,9 +48,8 @@
                 </div>
                 <div v-if="info.patient">
                     <!-- v-if = "isPatient" -->
-                    <span class="l-form-label">住院号: </span>
+                    <span class="l-form-label1">住院号: </span>
                     <span class="plain-txt">{{ info.patient }}</span>
-
                     <hr class="hr1" />
                 </div>
 
