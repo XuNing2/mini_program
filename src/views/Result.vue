@@ -1,9 +1,10 @@
 <template>
-    <div class="container">
+    <div>
         <el-container>
-            <!-- <el-header> </el-header> -->
+            <el-header
+                ><h1 class="title">颈椎病手部功能分析报告</h1>
+            </el-header>
             <el-main>
-                <div class="title">颈椎病手部功能分析报告</div>
                 <div class="hr"></div>
                 <div v-if="!errorResult">
                     <div class="l-form-label1">编号:</div>
@@ -264,7 +265,6 @@ export default {
                         console.log(response.data);
                         this.analyse = response.data.analyse;
                         this.info = response.data.info;
-
                         console.log(this.analyse);
                     }.bind(this)
                 )
@@ -362,6 +362,7 @@ export default {
             }
         },
     },
+    mounted() {},
 };
 </script>
 
@@ -378,6 +379,7 @@ export default {
     background-color: #eeeeee;
 }
 .el-container {
+    /* margin-top: 10%; */
     margin-left: 10%;
     margin-right: 10%;
     /* display: flex;
@@ -435,10 +437,7 @@ export default {
     margin-bottom: 20px;
 }
 
-.title {
-    font-size: 30px;
-    margin-top: 20px;
-    /* margin-bottom: 20px; */
+h1.title {
     font-weight: bold;
     letter-spacing: 3px;
     color: black;
