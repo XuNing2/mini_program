@@ -1,29 +1,5 @@
 <template>
     <div class="container">
-        <!-- <div class="title">颈椎病手部功能分析报告</div>
-        <div class="hr"></div>
-        <div>
-            <span class="l-form-label">编号:</span>
-            <span class="plain-txt">{{ info.id }}</span>
-        </div>
-        <div>
-            <span class="l-form-label">性别:</span>
-            <span class="plain-txt">{{ info.sex }}</span>
-        </div>
-        <div>
-            <span class="l-form-label">年龄:</span>
-            <span class="plain-txt">{{ info.age }}</span>
-        </div>
-        <div>
-            <span class="l-form-label">十秒抓握次数:</span>
-            <span class="plain-txt">左手{{ info.left_count }}次，</span>
-            <span class="plain-txt">右手{{ info.right_count }}次</span>
-        </div>
-        <div>
-            <span class="l-form-label">平均抓握时间:</span>
-            <span class="plain-txt">左手{{ info.left_atime }}秒，</span>
-            <span class="plain-txt">右手{{ info.right_atime }}秒</span>
-        </div> -->
         <el-container>
             <!-- <el-header> </el-header> -->
             <el-main>
