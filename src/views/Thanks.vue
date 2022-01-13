@@ -4,8 +4,7 @@
             <h1 class="thanks">感谢您的提交</h1>
             <div class="note-txt">检测时间约为1-2分钟</div>
             <div class="note-txt">具体时间受网络状况影响</div>
-            <div class="note-txt">检测完成后将向您推送分析报告（并不会）</div>
-            <div class="note-txt">现在可以退出网页耐心等候</div>
+            <div class="note-txt">请耐心等候</div>
         </div>
 
         <el-button

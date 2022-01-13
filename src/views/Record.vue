@@ -4,8 +4,7 @@
             <div class="note-txt">请按顺序完成以下步骤</div>
             <div class="note-txt">然后点击开始检测按钮</div>
             <div class="note-txt">检测时间约为1-2分钟</div>
-            <div class="note-txt">点击开始检测后</div>
-            <div class="note-red-txt">请确认订阅消息通知</div>
+            <div class="note-txt">请耐心等候</div>
         </div>
 
         <el-button
@@ -144,12 +143,12 @@ export default {
             });
         },
         beginCount() {
-            // const url = "/d-count/" + this.$store.state.gId + "/start";
+            const url = "/d-count/" + this.$store.state.gId + "/start";
             this.$store.state.cLoading = true;
-            const url = "/count/" + this.$store.state.gId + "/startandpush";
+            // const url = "/count/" + this.$store.state.gId + "/startandpush";
             // this.$axios.post(url);
             this.$axios
-                .post(url)
+                .get(url)
                 .then((result) => {
                     this.$store.state.cLoading = false;
                     console.result.data;
