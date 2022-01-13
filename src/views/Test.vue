@@ -6,7 +6,7 @@
                 class="video-js vjs-default-skin"
                 playsinline
             ></video>
-            <div></div>
+            <div class="note-txt">请录制10-12秒的手部抓握视频</div>
             <el-button type="primary" size="default" @click="upload" round
                 >上传视频</el-button
             ><Directupload></Directupload
@@ -145,5 +145,12 @@ export default {
 #myVideo {
     /* text-align: center; */
     /* margin-left: 40%; */
+}
+.note-txt {
+    color: red;
+    font-weight: bold;
+    font-size: 35rpx;
+    margin-bottom: 10rpx;
+    text-align: center;
 }
 </style>
