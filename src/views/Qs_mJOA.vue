@@ -139,18 +139,13 @@ export default {
 </script>
 
 <style scoped>
-/* .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 .el-main {
     /* color: #333; */
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
 }
 .title {
     /* font-size: 55rpx;
@@ -162,6 +157,8 @@ export default {
     text-align: center;
 }
 .question {
+    text-align: left;
+
     color: #989898;
     font-weight: bold;
 }
@@ -176,6 +173,8 @@ export default {
     background-color: #eeeeee;
 }
 .el-radio {
+    text-align: left;
+
     display: block;
     margin: 10px 0;
 }
