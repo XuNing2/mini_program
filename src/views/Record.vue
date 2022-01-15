@@ -70,8 +70,8 @@
             v-if="!cFailed && cLoading && !cFinish"
             type="primary"
             icon="el-icon-warning"
-            loading="true"
-            disabled="true"
+            :loading="true"
+            :disabled="true"
             round
             >正在检测</el-button
         >
@@ -161,7 +161,6 @@ export default {
                 .catch((err) => {
                     console.log(err.data);
                     this.$store.state.cLoading = false;
-
                     this.$store.state.cFinish = false;
                     this.$store.state.cFailed = true;
                     this.cFinish = false;

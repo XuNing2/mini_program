@@ -22,6 +22,7 @@ module.exports = {
         host: "127.0.0.1",
         port: 8080,
         https: false,
+        timeout: 3 * 60 * 1000, // 请求超时时间
         hotOnly: false,
         proxy: {
             "/api": {

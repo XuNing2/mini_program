@@ -9,8 +9,8 @@
             <div class="note-txt">请录制或上传10-12秒的手部抓握视频</div>
             <el-button type="primary" size="default" @click="upload" round
                 >上传视频</el-button
-            ><Directupload></Directupload
-        ></el-main>
+            ></el-main
+        >
         <Test1></Test1>
     </div>
 </template>
