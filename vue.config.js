@@ -22,10 +22,10 @@ module.exports = {
         host: "127.0.0.1",
         port: 8080,
         https: false,
-        timeout: 3 * 60 * 1000, // 请求超时时间
         hotOnly: false,
         proxy: {
             "/api": {
+                timeout: 3 * 60 * 1000, // 请求超时时间
                 // 请求的目标地址的BaseURL
                 target: "https://z-hand.site/",
                 changeOrigin: true, //是否开启跨域
