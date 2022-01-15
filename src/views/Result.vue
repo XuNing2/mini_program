@@ -414,7 +414,8 @@ export default {
 
     font-size: 25px;
     font-weight: bold;
-    opacity: 80%;
+    /* opacity: 20%; */
+    color: #566573;
 }
 .l-form-label1 {
     text-align: left;
@@ -422,7 +423,9 @@ export default {
 
     font-size: 25px;
     font-weight: bold;
-    opacity: 80%;
+    color: #566573;
+
+    /* opacity: 20%; */
 }
 .plain-txt {
     font-size: 25px;
