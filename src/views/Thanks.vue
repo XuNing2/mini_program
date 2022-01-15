@@ -8,6 +8,7 @@
         </div>
 
         <el-button
+            v-if="false"
             class="btn-txt"
             type="primary"
             round
