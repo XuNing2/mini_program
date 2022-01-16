@@ -150,21 +150,26 @@ export default {
             this.$axios
                 .get(url)
                 .then((result) => {
-                    this.$store.state.cLoading = false;
-                    console.result.data;
-                    this.$store.state.cFinish = true;
-                    this.$store.state.cFailed = false;
-                    this.cFinish = true;
-                    this.cFailed = false;
+                    setTimeout(() => {
+                        this.$store.state.cLoading = false;
+                        console.log("start success!");
+                        this.$store.state.cFinish = true;
+                        this.$store.state.cFailed = false;
+                        this.cFinish = true;
+                        this.cFailed = false;
+                    }, 20 * 1000);
+
                     // this.$router.push({ path: "/result" });
                 })
                 .catch((err) => {
-                    console.log(err.data);
-                    this.$store.state.cLoading = false;
-                    this.$store.state.cFinish = false;
-                    this.$store.state.cFailed = true;
-                    this.cFinish = false;
-                    this.cFailed = true;
+                    setTimeout(() => {
+                        console.log("start failed!");
+                        this.$store.state.cLoading = false;
+                        this.$store.state.cFinish = false;
+                        this.$store.state.cFailed = true;
+                        this.cFinish = false;
+                        this.cFailed = true;
+                    }, 20 * 1000);
                     // this.$router.push({ path: "/result" });
                 });
         },
